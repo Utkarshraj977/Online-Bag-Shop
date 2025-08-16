@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bag Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Optional: Custom CSS -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 mb-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-blue-600">Bag Store</a>
+            <% var loggedin=typeof loggedin !=="undefined" ? loggedin : true %>
+                <% if(loggedin){ %>
+                    <div class="flex gap-5">
+                        <a href="/users/shop">Shop</a>
+                        <a href="/users/cart">Cart</a>
+                        <a href="/products" class="mr-4 text-gray-700 hover:text-blue-500">My Accounts</a>
+                        <a href="/users/logout" class="text-red-500 hover:text-red-700">Logout</a>
+                    </div>
+                    <% } %>
+
+        </div>
+    </nav>
